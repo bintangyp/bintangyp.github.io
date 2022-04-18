@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap");
+* {
+  font-family: "Roboto Mono", monospace;
+}
+
+.bg-color {
+  background-color: rgb(8, 66, 152);
+}
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #0842981f;
+}
+#project {
+  background-color: #0842981f;
+}
