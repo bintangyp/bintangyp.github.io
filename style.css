@@ -116,7 +116,7 @@ body {
   position: relative;
   overflow-y: scroll;
   overflow-x: hidden;
-  background-color: tomato;
+  /* background-color: tomato; */
 }
 .content .content-text {
   font-size: 0.9em;
