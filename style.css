@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --primary: #1d1d20;
+  --secondary: rgba(34, 193, 195, 1);
+  --accent: rgba(253, 187, 45, 1);
+  --text: #cccccc;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+body {
+  background: var(--primary);
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  /* background-color: yellowgreen; */
+  position: relative;
+  height: inherit;
+  margin: 0 10%;
+}
+.border-left::before,
+.border-left::after,
+.border-right::before,
+.border-right::after {
+  content: "";
+  position: absolute;
+  transition: transform 0.5s ease;
+}
+.border-left::before {
+  background: linear-gradient(45deg, var(--secondary) 0%, var(--accent) 100%);
+  width: 200px;
+  height: 15px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.border-left::after {
+  background: linear-gradient(180deg, var(--secondary) 0%, var(--accent) 100%);
+  width: 15px;
+  height: 200px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.border-right::before {
+  background: linear-gradient(270deg, var(--secondary) 0%, var(--accent) 100%);
+  width: 200px;
+  height: 15px;
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.border-right::after {
+  background: linear-gradient(0deg, var(--secondary) 0%, var(--accent) 100%);
+  right: 0px;
+  bottom: 0;
+  width: 15px;
+  height: 200px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.container .header,
+.container .footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header,
+.footer {
+  height: 75px;
+  padding: 20px;
+  /* background-color: violet; */
+}
+.header .logo {
+  color: var(--text);
+  font-size: 2em;
+}
+.medsos ul {
+  display: flex;
+  gap: 20px;
+  float: inline-end;
+}
+.medsos ul li {
+  list-style: none;
+  color: var(--text);
+  font-weight: 100;
+}
+.medsos ul li i {
+  font-size: 1.6em;
+}
+
+.main {
+  color: var(--text);
+  /* background-color: tomato; */
+  padding: 20px;
+  height: calc(100% - 150px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: aqua; */
+}
+.content {
+  width: 70%;
+  max-width: 700px;
+  height: 100%;
+  max-height: max-content;
+  padding: 10px;
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: tomato;
+}
+.content .content-text {
+  font-size: 0.9em;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  line-height: 1.5em;
+  border-left: 2px solid white;
+}
+
+.sidebar {
+  width: 30%;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome {
+  margin-top: 20px;
+}
+.box {
+  transition: all ease-in-out 0.3s;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.box:hover {
+  font-size: 1.4em;
+}
+.box input {
+  background: none;
+  font-size: 1.2em;
+  color: var(--text);
+  border: 0;
+}
+
+.main-view {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 1;
+  transform-origin: -100%;
+  transform: scaleX(1);
+  transition: all 0.3s linear;
+}
+.individual-project {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: 100%;
+  transition: all 0.3s linear;
+}
+.project-show {
+  opacity: 1;
+  transform: scaleX(1);
+}
+.home-hidden {
+  opacity: 0 !important;
+  transform: scaleX(0) !important;
+}
+
+#whyMe {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  border: 1px solid var(--text);
+  border-radius: 10px;
+  width: 50%;
+  margin: 0 10px 20px 10px;
+  padding: 15px;
+  flex: 1 0 0%;
+}
+.card-left {
+  align-self: flex-start;
+}
+
+.card-right {
+  align-self: flex-end;
+}
+
+.card .title {
+  color: white;
+  font-size: 1.2em;
+  text-transform: capitalize;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid white;
+}
+.card .description {
+  font-size: 0.9em;
+  line-height: 1.4em;
+  letter-spacing: 1px;
+}
+
+.photo {
+  height: 100px;
+  max-height: 200px;
+  display: flex;
+  align-items: center;
+  height: 90%;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  background-image: url("profile.png");
+  background-size: cover;
+}
+
+.dflex {
+  display: flex;
+}
+
+.whyme-title {
+  font-size: 2em;
+  text-transform: capitalize;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.profile {
+  margin-left: 20px;
+  line-height: 1.5em;
+  font-size: 0.8em;
+}
+.profile p {
+  margin-bottom: 7px;
+}
+
+.project-title {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.list-project {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10%;
+  row-gap: 20px;
+  padding: 20px;
+}
+
+.card-project {
+  height: 300px;
+  width: 45%;
+  border: 1px solid var(--text);
+  border-radius: 20px;
+  padding: 15px;
+  overflow: hidden;
+  transition: all ease-in-out 0.4s;
+}
+
+.card-project:hover {
+  border-color: var(--secondary);
+  transform: scale(1.05);
+}
+
+.card-project img {
+  width: 100%;
+  border-radius: 10px;
+}
+.card-project .card-title {
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+.card-detail {
+  font-size: 0.7em;
+  line-height: 1.4em;
+  margin-left: 10px;
+}
+.card-btn {
+  text-align: center;
+}
+
+.btnShow {
+  background-color: var(--primary);
+  padding: 6px 10px;
+  border: 1px solid var(--text);
+  border-radius: 5px;
+  text-align: center;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.8em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
