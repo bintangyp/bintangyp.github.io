@@ -30,6 +30,14 @@
     font-size: 1.05em !important;
   }
   .line-1 {
-    font-size: 1.5em;
+    font-size: 1.8em;
+  }
+  .content .content-text {
+    padding: 10px 0;
+    border-left: 0;
+    border-top: 1px solid var(--text);
+  }
+  .scrollbar {
+    margin: 0 !important;
   }
 }
