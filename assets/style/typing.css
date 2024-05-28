@@ -26,13 +26,15 @@ body {
 .anim-typewriter {
   animation: typewriter 1.5s steps(14) 1.2s 1 normal both,
     blinkTextCursor 700ms steps(14) infinite normal;
+  -webkit-animation: typewriter 1.5s steps(14) 1.2s 1 normal both,
+    blinkTextCursor 700ms steps(14) infinite normal;
 }
 @keyframes typewriter {
   from {
     width: 0;
   }
   to {
-    width: 7.5em;
+    width: 8em;
   }
 }
 @keyframes blinkTextCursor {

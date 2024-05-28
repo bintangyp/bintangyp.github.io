@@ -13,7 +13,7 @@
   .sidebar {
     position: fixed;
     bottom: 0;
-    background-color: var(--accent);
+    /* background-color: var(--accent); */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -23,21 +23,54 @@
   }
   .box input {
     font-size: 0.9em;
-    color: var(--primary);
-    background-color: aqua;
+    color: var(--text);
+    /* background-color: aqua; */
   }
   .box:hover {
     font-size: 1.05em !important;
   }
   .line-1 {
     font-size: 1.8em;
+    font-weight: bold;
   }
   .content .content-text {
-    padding: 10px 0;
+    padding: 20px 0;
     border-left: 0;
     border-top: 1px solid var(--text);
   }
   .scrollbar {
     margin: 0 !important;
+  }
+  .card {
+    width: fit-content;
+    margin: 0 0 10px 0;
+  }
+  .whyme-title {
+    font-size: 24px;
+  }
+  .card .title {
+    font-size: 16px;
+  }
+  .card .description {
+    font-size: 12px;
+  }
+  .dflex {
+    display: block;
+  }
+  .individual-project {
+    height: fit-content;
+  }
+  .profile {
+    margin: 0;
+  }
+  .profile p {
+    text-indent: 10px;
+  }
+  .list-project {
+    padding: 5px;
+  }
+  .card-project {
+    height: fit-content;
+    width: 100%;
   }
 }
